@@ -72,9 +72,9 @@ public class Launcher
 	private static final File LOGS_DIR = new File(RUNELITE_DIR, "logs");
 	private static final File REPO_DIR = new File(RUNELITE_DIR, "repository2");
 	private static final File CRASH_FILES = new File(LOGS_DIR, "jvm_crash_pid_%p.log");
-	static final String LAUNCHER_BUILD = "https://raw.githubusercontent.com/casesos/launcher/master/build.gradle.kts";
-	private static final String CLIENT_BOOTSTRAP_STAGING_URL = "https://raw.githubusercontent.com/casesos/hosting-repo/master/bootstrap-staging.json";
-	private static final String CLIENT_BOOTSTRAP_STABLE_URL = "https://raw.githubusercontent.com/casesos/hosting-repo/master/bootstrap-stable.json";
+	static final String LAUNCHER_BUILD = "https://raw.githubusercontent.com/FrogPointer/launcher/master/build.gradle.kts";
+	private static final String CLIENT_BOOTSTRAP_STAGING_URL = "";
+	private static final String CLIENT_BOOTSTRAP_STABLE_URL = "https://raw.githubusercontent.com/FrogPointer/Hosting/main/bootstrap-stable.json";
 	static final String USER_AGENT = "OpenOSRS/" + LauncherProperties.getVersion();
 	private static final boolean enforceDependencyHashing = true;
 	private static boolean nightly = false;
@@ -202,7 +202,7 @@ public class Launcher
 			OpenOSRSSplashScreen.init(nightly ? "Nightly" : stable ? "Stable" : "Staging");
 			OpenOSRSSplashScreen.stage(0, "Setting up environment");
 
-			log.info("OpenOSRS Launcher version {}", LauncherProperties.getVersion());
+			log.info("FusionPKLauncher version {}", LauncherProperties.getVersion());
 			// Print out system info
 			log.debug("Java Environment:");
 			final Properties p = System.getProperties();

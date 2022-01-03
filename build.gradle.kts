@@ -23,8 +23,8 @@ plugins {
 }
 
 group = "com.openosrs"
-version = "2.2.0"
-description = "OpenOSRS Launcher"
+version = "2.2.3"
+description = "FusionPK Launcher"
 
 repositories {
     mavenLocal()
@@ -83,11 +83,11 @@ tasks {
     processResources {
         val tokens = mapOf(
                 "basedir"         to project.projectDir.path,
-                "finalName"       to "OpenOSRS",
+                "finalName"       to "Fusion",
                 "artifact"        to "launcher",
                 "project.version" to project.version,
                 "project.group"   to project.group,
-                "description"     to "OpenOSRS launcher"
+                "description"     to "Fusion launcher"
         )
 
         copy {
@@ -127,7 +127,7 @@ tasks {
     }
 
     shadowJar {
-        archiveName = "OpenOSRS-shaded.jar"
+        archiveName = "Fusion-shaded.jar"
         exclude("net/runelite/injector/**")
     }
 
